@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FREE INTERNET💀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="num">
+        <form method="post">
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="9173486XXXX">
+            <br><br>
+            <label for="SIM1">Choose SIM:</label>
+            <select id="SIM1" name="fruit">
+                <option value="sim-vi">VI</option>
+                <option value="sim-bsnl">BSNL</option>
+                <option value="sim-jio">JIO</option>
+                <option value="sim-airtel">Airtel</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+            <div class="warning" id="warning-message"></div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const phoneNumberInput = document.getElementById('phone-number');
+        const warningMessage = document.getElementById('warning-message');
+
+        form.addEventListener('submit', (event) => {
+            if (!phoneNumberInput.value) {
+                event.preventDefault(); // Prevent form submission
+                warningMessage.textContent = 'Please enter a valid phone number.';
+            } else {
+                window.location.href = 'https://example.com/thanks.html';
+            }
+        });
+    </script>
+</body>
